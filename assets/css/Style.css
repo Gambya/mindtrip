@@ -18,10 +18,12 @@ a:hover{ color: #BED75F; }
 
 /* -- Estilos Principais -- */
 /* header */
-.header{ width: 100%; height: 78px; background-color: #fff; position: fixed; }
+.header{ width: 100%; height: 78px; background-color: #fff; }
+
+.header-content{ max-width: 1200px; margin: 0 auto; }
 
 /* Logo */
-.logo { width: 20.744680851064%; float: left; margin-top: 1em; margin-left: 3em; } /* 264px/1128px */
+.logo { width: 20.744680851064%; float: left; margin-top: 1.5em; } /* 264px/1128px */
 
 /* Menu */
 .menu{ width: 70%; float: right; margin-right: 3em; }
@@ -30,8 +32,71 @@ a:hover{ color: #BED75F; }
 .menu li a{ color: #999; }
 .menu li a:hover{ color: #BED75F; }
 
+.search-category{
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 2em;
+}
+
 /* conteudo */
-.conteudo{ max-width: 1128px; margin: 0; }
+.conteudo{ max-width: 1200px; margin: 0 auto; }
+
+/* Chamadas */
+.chamadas{ position: relative; margin-bottom: 4.8em; }
+
+/* Carrocel */
+.carrocel { 
+    width: 72.87234042553191%; /* 822px/1128px */
+    height: 450px;
+    background: url('/assets/img/wallp.jpg');
+    float: left;
+    border-radius: 0.6em;
+    margin-right: 2.12765957446809%; /* 24px/1128px */
+}
+
+/* Caixa */
+.caixa {
+    width: 72.87234042553191%; /* 822px/1128px */
+    padding: 0.1em 4em 0.1em 4em;
+    position: absolute;
+    bottom: 0px;
+    background: rgba(0,0,0,0.6);
+    color: #FFF;
+    border-bottom-left-radius: 0.6em;
+    border-bottom-right-radius: 0.6em;
+}
+.caixa-texto{ margin: 0 auto; }
+.caixa-seletor{  }
+.caixa-seletor ul{ text-align: center; }
+.caixa-seletor li{ text-align: -webkit-match-parent; padding: 0.2em; display: inline-block;}
+.caixa-seletor li a{ 
+    width: 1em;
+    height: 1em;
+    display: block;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 0.6em;
+    text-indent: -9999px;
+}
+.caixa-seletor li a.active{ background-color: #BED75F; }
+
+/* Tools */
+.tools {
+    margin: 0px;
+    height: 450px;
+    background-color: #fff;
+    border-radius: 0.6em;
+}
+
+/* Colunas */
+.coluna{ 
+    width: 23.40425531914894%; /* 264px/1128px */
+    margin-right: 2.12765957446809%;
+    float: left;
+}
+.coluna:last-child{margin-right: 0px;}
+
+/* norma */
 .clearfix:before,
 .clearfix:after{ content: " "; display: table; }
 .clearfix:after{ clear: both; }
