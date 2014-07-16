@@ -1,0 +1,38 @@
+/* CSS MindTrip */
+/*==============================
+            Normas
+================================*/
+body{ font-size: 62.5%; line-height: 1.5; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; color: 444; margin: 0; background-color: #333;}
+img,
+picture,
+video,
+embed{ max-width: 100%; }
+*, *:before, *:after {
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+a{ color: #00ccff; text-decoration: none; font-size: 1.6em; }
+a:hover{ color: #BED75F; }
+
+/* -- Estilos Principais -- */
+/* header */
+.header{ width: 100%; height: 78px; background-color: #fff; position: fixed; }
+
+/* Logo */
+.logo { width: 20.744680851064%; float: left; margin-top: 1em; margin-left: 3em; } /* 264px/1128px */
+
+/* Menu */
+.menu{ width: 70%; float: right; margin-right: 3em; }
+.menu ul{ float: right; }
+.menu li{ font-size: 1.2em; margin-left: 2em; margin-top: 1em; display: inline-block; }
+.menu li a{ color: #999; }
+.menu li a:hover{ color: #BED75F; }
+
+/* conteudo */
+.conteudo{ max-width: 1128px; margin: 0; }
+.clearfix:before,
+.clearfix:after{ content: " "; display: table; }
+.clearfix:after{ clear: both; }
+.clearfix{ *zoom: 1; }
