@@ -1,0 +1,29 @@
+/**================================================================================**
+*    Nimbus 0.1 - Componentes UX                                                    *
+*    by Roberto Ramos                                                               *
+* *=================================================================================*/
+
+/* == Component == */
+/*      Panel      */
+.panel{
+    width: 100%;
+    background-color: #fff;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border-radius: 0.3em;
+}
+.panel-head{
+    color: #FFF;
+    font-size: 1.5em;
+    font-style: oblique;
+    background-color: #BED75F;
+    padding: 0.6em;
+    border-top-left-radius: 0.3em;
+    border-top-right-radius: 0.3em;
+    border-bottom: 0.1em solid #666;
+}
+.panel-content{
+    padding: 1em;
+    font-size: 1.2em;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #000;
+}
