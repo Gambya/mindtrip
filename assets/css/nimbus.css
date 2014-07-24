@@ -3,6 +3,26 @@
 *    by Roberto Ramos                                                               *
 * *=================================================================================*/
 
+/* Importando Font */
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+
+body{ font-family: "Droid Sans", sans-serif; }
+
+/* == Esquema de Cores == */
+/*          Cores         */
+.default{ background: #999; color: #fff; }
+.primary{ background: #0000CD; color: #fff; }
+.sucess{ background: #32CD32; color: #fff; }
+.info{ background: #6495ED; color: #fff; }
+.warning{ background: #FF8C00; color: #fff; }
+.danger{ background: #FF0000; color: #fff; }
+
+
+/*==        Icones      ==*/
+.view-icon{
+    background: url(../assets/img/view-icon.png);
+}
+
 /* == Component == */
 /*      Panel      */
 .panel{
@@ -29,4 +49,8 @@
 }
 
 /* == Component == */
-/*      Panel      */
+/*      Label      */
+.label{
+    padding: 0.8em;
+    border-radius: 0.3em;
+}

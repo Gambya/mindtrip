@@ -46,26 +46,156 @@ a:hover{ color: #BED75F; }
 .header-content{ max-width: 1200px; margin: 0 auto; }
 
 /* Logo */
-.logo { width: 20.744680851064%; float: left; margin-top: 1.5em; } /* 264px/1128px */
+.logo { width: 20.744680851064%; float: left; margin-top: 1.2em; } /* 264px/1128px */
 
 /* Menu */
 .menu{ width: 70%; float: right; margin-right: 3em; }
-.menu ul{ float: right; }
-.menu li{ font-size: 1.2em; margin-left: 2em; margin-top: 1em; display: inline-block; }
-.menu li a{ color: #999; }
-.menu li a:hover{ color: #BED75F; }
+.menu ul{ 
+    float: right;
+    background: #fff;
+    height: 4em;
+    position: relative;
+    padding: 0 0.1em;
+}
+.menu li{ 
+    font-size: 1.2em;
+    margin-left: 2em;
+    margin-top: 1em;
+    display: inline-block;
+}
+.menu a, .menu a:visited{
+    color: #999;
+    display: block;
+    text-decoration: none;
+}
+.menu a:hover{ 
+    color: #BED75F;
+}
+.menu li:hover > a{
+    color: #BED75F;
+}
+.menu ul ul{
+    width: 20em;
+    border-top: 1em solid #BED75F;
+    border-radius: 0.3em;
+    display: none;
+    position: absolute;
+    top:3em;
+    height: auto;
+    padding: 0;
+}
+.menu ul ul li{
+    margin-top: 0;
+    margin-right: 2em;
+    font-size: 1em;
+    clear: both;
+}
+.menu ul a,.menu ul ul a:visited{
 
+}
+
+/* Formulário de Pesquisa */
+.top h2{
+    display: none;
+}
+.searchform{
+    padding: 1em;
+    margin-bottom: 2em;
+}
+.searchform label{
+    display: none;
+}
+.searchform #s{
+    border: none;
+    width: 100%;
+    font-size: 2em;
+    height: auto;
+    color: #705556;
+}
+.searchform #searchsubmit{
+    float: right;
+    width: 30%;
+    padding: 0.3em;
+    height: 100%;
+    border: 0.1em solid #BED75F;
+    background-color: #BED75F;
+    border-bottom-left-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
+    font-family: "Droid Sans", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    color: #fff;
+}
+.searchform div{
+    border: 0.1em solid #BED75F;
+    border-radius: 0.3em;
+}
+/* Formulário de Newsletter */
+.knews_add_user{
+    font-family: "Droid Sans", Helvetica, Arial, sans-serif;
+    padding: 1em;
+    padding-top: 0;
+}
+.knews_add_user p{
+    text-align: justify;
+    font-weight: 700;
+    font-size: 1.2em;
+    color: #705556;
+}
+.name{
+    margin: 0;
+    padding: 0;
+}
+.name input{
+    border: 0.08em solid #BED75F;
+    border-radius: 0.18em;
+    width: 100%;
+    font-size: 2em;
+    height: 1.7em;
+    color: #705556;
+}
+.knewsemail{
+    margin: 0;
+    padding: 0;
+}
+.knewsemail input{
+    border: 0.08em solid #BED75F;
+    border-radius: 0.18em;
+    width: 100%;
+    font-size: 2em;
+    height: 1.7em;
+    color: #705556;
+}
+.knewsbutton{
+    margin: 0;
+    padding: 0;
+}
+.knewsbutton input{
+    float: right;
+    border: 0.08em solid #BED75F;
+    border-radius: 0.18em;
+    font-size: 1.5em;
+    font-weight: 700;
+    height: 1.7em;
+    background-color: #BED75F;
+    color: #fff;
+}
+.tools iframe{
+    padding-left: 1em;
+    padding-top: 0;
+}
 /* Filtrar por Categoria */
 .search-category{
     max-width: 1200px;
     margin: 0 auto;
     display: none;
+    padding: 1em;
+    border-bottom: 1em solid #BED75F;
 }
 .dropdown-category{
     max-width: 1200px;
     margin: 0 auto;
     text-align: right;
-    margin-top: 0.2em;
+    margin-top: 0.20em;
     margin-bottom: 0.6em;
 }
 .dropdown-category a{
@@ -76,7 +206,25 @@ a:hover{ color: #BED75F; }
     border-bottom-right-radius: 0.3em;
 }
 .dropdown-category a:hover{
-    color: #999;
+    color: #705556;
+}
+.categories{
+    display: block;
+    list-style: none;
+    font-size: 1em;
+    font-family: "Droid Sans", Helvetica, Arial, sans-serif;
+}
+.tags h2{
+    color: #fff;
+}
+.tagcloud a{
+    background-color: #999;
+    padding: 0.8em;
+    border-radius: 0.3em;
+    color: #fff;
+}
+.tagcloud a:hover{
+    color: #333;
 }
 
 /* conteudo */
@@ -94,6 +242,11 @@ a:hover{ color: #BED75F; }
     float: left;
     border-radius: 0.3em;
     margin-right: 2%; /* 24px/1200px */
+}
+.carrocel img{
+    width: 100%;
+    border-radius: 0.3em;
+    height: 450px;
 }
 
 /* Caixa */
@@ -149,8 +302,13 @@ a:hover{ color: #BED75F; }
     border-radius: 0.3em;
 }
 .artigo-img{
+    width: 276px;
+}
+.catimg{
     width: 100%;
-    height: 129px;
+}
+.artigo-img a:hover img{
+    opacity: 0.5;
 }
 .artigo-img img{
     border-top-left-radius: 0.3em;
@@ -158,24 +316,32 @@ a:hover{ color: #BED75F; }
 }
 .artigo-view{
     position: relative;
-    top: -25px;
+    top: -3.3em;
     width: 100%;
     color: #fff;
     font-size: 1em;
     background: rgba(190,215,95,0.9);
     text-align: right;
-    padding: 0.3em;
+    padding: 0.5em;
+}
+.artigo-view img{
+    width: 5%;
 }
 .artigo-texto{
     margin: 1em;
 }
 .artigo-texto h1{
     text-align: center;
-    line-height: 0.1em;
-    font-size: 1.6em;
+}
+.artigo-texto a{
+    font-size: 1.8em;
     color: #BED75F;
 }
+.artigo-texto a:hover{
+    color: #705556;
+}
 .artigo-texto p{
+    text-align: justify;
     font-size: 1.2em;
 }
 .artigo-dados{
@@ -197,24 +363,36 @@ a:hover{ color: #BED75F; }
 
 /* Populares */
 .populares-dados{
-    padding: 0.2em 1em 0.2em 1em;
+    width: 100%;
+    height: auto;
+    padding: 0.2em 0em 0.2em 0em;
+    margin-bottom: 0.5em;
 }
 .populares-dados img{
     position: relative;
     width: 18%;
+    height: auto;
     float: left;
     margin-right: 1em;
-    border-radius: 0.3em;
+    border-radius: 0.2em;
 }
 .populares-dados h2{
     line-height: 1em;
-    font-size: 1em;
+    font-size: 0.7em;
 }
-
+.populares-dados a{ color: #705556; }
+.populares-dados a:hover{ color: #BED75F; }
+.populares-dados a:hover img{ opacity: 0.6; }
 /* Parceitos */
-.parceiros-coluna{
-    width: 100%;
-    border-bottom: 2em;
+.panel ul{
+    margin-left: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+.panel ul li{
+    margin: 0 auto;
+    padding: 1em;
 }
 
 /* Footer */
@@ -237,6 +415,7 @@ a:hover{ color: #BED75F; }
 }
 
 .cols:last-child{
+    width: 25%;
     margin-right: 0px;
 }
 
@@ -255,7 +434,7 @@ a:hover{ color: #BED75F; }
 .social-icon img{
     width: 23%;
     position: relative;
-    top: -1.45em;
+    top: -1.6em;
 }
 .social-contato{
     position: relative;
@@ -270,15 +449,25 @@ a:hover{ color: #BED75F; }
 
 /* Footer barra navegação */
 .barnavbottom{
-    color: #705556;
-    font-size: 1.5em;
+    margin: 0 auto;
 }
-.barnavbottom a{
+.barnavbottom ul{
+    list-style: none;
+    color: #705556;
+    font-size: 1.3em;
+}
+.barnavbottom li{
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 800;
+}
+.barnavbottom li a{
+    text-decoration: none;
     color: #705556;
     font-size: 1em;
     font-weight: 800;
 }
-.barnavbottom a:hover{
+.barnavbottom li a:hover{
     color: #BED75F;
     font-size: 1em;
     font-weight: 800;

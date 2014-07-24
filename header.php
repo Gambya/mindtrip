@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?></htm>>
+<html <?php language_attributes(); ?>>
 <!--      
 Este HTML foi criado pelo designer e desenvolvedor Roberto Ramos como template do wordpress para o blog Mind Trip.
 
@@ -22,35 +22,28 @@ E-mail:    robertolopesramos@gmail.com
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> itemscope="" itemtype="http://schema.org/WebPage">
+<body itemscope="" itemtype="http://schema.org/WebPage">
     <header class="header">
         <div class="header-content">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="Logo Mind Trip" class="logo">
-            <nav class="menu">
-                <?php
-                    wp_nav_menu(
-                        array(
-                            'theme_location' => 'main-menu',
-                            'depth'          => 2,
-                            'container'      => false,
-                            'menu_class'     => 'menu',
-                        )
-                    );
-                ?>
-                <!--<ul>
-                    <li><a href="#"><b>Home</b></a></li>
-                    <li><a href="#"><b>Front-End</b></a></li>
-                    <li><a href="#"><b>Back-End</b></a></li>
-                    <li><a href="#"><b>Úteis</b></a></li>
-                    <li><a href="#"><b>Notícias</b></a></li>
-                    <li><a href="#"><b>Sobre</b></a></li>
-                </ul>-->
+            <a href="<?php get_option("home"); ?>">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="Logo Mind Trip" class="logo">
+            </a>
+            <nav class="menu" id="menu">
+                <ul>
+                    <li><a href="<?php echo get_option("home"); ?>">Home</a></li>
+                    <?php
+                        $args = array(
+                            'title_li'=>''
+                        );
+                        wp_list_categories($args);
+                    ?>
+                </ul>
             </nav><!-- /Menu -->
         </div><!-- /Header-Content -->
     </header><!-- /Header -->
-    <div class="search-category">
-        search
+    <div class="search-category" id="scategoria">
+        <?php get_sidebar('tags'); ?>
     </div><!-- /Search-Category -->
-    <div class="dropdown-category">
-        <a href="#">Filtrar Categoria</a>
+    <div class="dropdown-category" id="dcategoria">
+        <a href="#">Tags</a>
     </div><!-- /Dropdown-Category -->
