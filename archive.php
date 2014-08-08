@@ -6,21 +6,20 @@
             <div class="title-archive">
                 <?php the_post(); ?>
                 <?php if(is_day()): ?>
-                    <h1><?php printf( __( 'Arquivos do Dia: <span>%s</span>', 'seu-template' ), get_the_time(get_option('date_format'))); ?></h1>
+                    <h1><?php echo 'Arquivos do Dia: <span>'.get_the_time(get_option('date_format')).'</span>'; ?></h1>
                 <?php elseif(is_month()): ?>
-                    <h1><?php printf( __( 'Arquivos do Mês: <span>%s</span>', 'seu-template' ), get_the_time('F Y') ); ?></h1>
+                    <h1><?php echo 'Arquivos do Mês: <span>'.get_the_time('F Y').'</span>'; ?></h1>
                 <?php elseif(is_year()): ?>
-                    <h1><?php printf( __( 'Arquivos do Ano: <span>%s</span>', 'seu-template' ), get_the_time('Y') ) ?></h1>
+                    <h1><?php echo 'Arquivos do Ano: <span>'.get_the_time('Y').'</span>'; ?></h1>
+                <?php elseif(is_category()): ?>
+                    <h1>Arquivos das Categorias: <?php echo the_category(' • '); ?></h1>
+                <?php elseif(is_tag()): ?>
+                    <h1><?php the_tags('Arquivos das Tags: ',' • ',''); ?></h1>
                 <?php elseif(isset($_GET['paged']) && !empty($_GET['paged'])): ?>
                     <h1><?php _e('Arquivos do Blog:', 'seu-template'); ?></h1>
                 <?php endif; ?>
                 <?php rewind_posts(); ?>
             </div>
-            
-            <?php global $wp_query; $total_pages = $wp_query->max_num_pages; if ( $total_pages > 1 ) { ?> 
-            <div id="nav-above" class="navigation">
-                <div class="nav-previous"><?php next_posts_link(__( '<span class="meta- nav">«</span> Older posts', 'seu-template' )) ?></div>                          <div class="nav-next"><?php previous_posts_link(__( 'Newer posts <span class="meta-nav">»</span>', 'seu-template' )) ?></div>                     </div><!– #nav-above –> <?php } ?>
-            
             <?php while(have_posts()): the_post(); ?>
             <article class="artigo-archive">
                 <div class="artigo-img-archive">
@@ -48,6 +47,9 @@
                 endwhile;
                 wp_reset_query();
             ?>
+            <div class="paginacao">
+                <?php wp_pagination(); ?>
+            </div>
         </section>
         <!-- Coluna lateral para aplicações -->
         <section class="coluna-side">

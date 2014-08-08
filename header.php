@@ -19,6 +19,7 @@ E-mail:    robertolopesramos@gmail.com
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/nimbus.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/search.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/archive.css">
     <!-- bxSlider CSS file -->
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/queryLoader.css">
     <link href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.ico" rel="shortcut icon">
