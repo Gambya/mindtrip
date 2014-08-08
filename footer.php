@@ -67,8 +67,20 @@
         </div>
     </footer><!--/footer -->
     <script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery-2.1.1.min.js" type="text/javascript"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.cycle2.min.js" type="text/javascript"></script>
+    <!-- QueryLoader Script file -->
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.queryloader2.min.js" type="text/javascript"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/assets/js/custom.js" type="text/javascript"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/slide.js" type="text/javascript"></script>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&appId=1441330619481325&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <div id="fb-root"></div>
 <?php wp_footer(); ?>
 </body>
 </html>

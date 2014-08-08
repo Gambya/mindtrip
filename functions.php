@@ -33,6 +33,20 @@ if(function_exists('register_sidebar')){
         'name'          => 'footer',
         'before_widget' => '<div class="widgets">',
         'after_widget'  => '</div>',
+        'before_title'  => '<span class="footer-head"><b>',
+        'after_title'   => '</b></span>'
+    ));
+    register_sidebar(array(
+        'name'          => 'posts',
+        'before_widget' => '<div class="posts-news">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2>',
+        'after_title'   => '</h2>'
+    ));
+    register_sidebar(array(
+        'name'          => 'search',
+        'before_widget' => '<div class="search-pesquisar">',
+        'after_widget'  => '</div>',
         'before_title'  => '<h2>',
         'after_title'   => '</h2>'
     ));
@@ -71,4 +85,43 @@ function most_popular_posts($no_posts = 2, $before = '<div class="populares_dado
                 }
                 echo $output;
 }
+
+/**
+* Contagem geral de comentarios de posts
+*/
+function full_comment_count() {
+    global $post;
+    $url = get_permalink($post->ID);  
+
+    $filecontent = file_get_contents('https://graph.facebook.com/?ids='.$url);
+    $json = json_decode($filecontent);
+    $count = $json->$url->comments;
+    $wpCount = get_comments_number();
+    $realCount = $count + $wpCount;
+    if ($realCount == 0 || !isset($realCount)) {
+        $realCount = 0;
+    }
+    return $realCount;
+}
+
+/**
+* Função facilitadora do category.php
+*/
+// Retorna outras categorias excepto a atual (redundante)
+function cats_meow($glue) {
+ $current_cat = single_cat_title( '', false );
+ $separator = "\n";
+ $cats = explode( $separator, get_the_category_list($separator) );
+ foreach ( $cats as $i => $str ) {
+  if ( strstr( $str, ">$current_cat<" ) ) {
+   unset($cats[$i]);
+   break;
+  }
+ }
+ if ( empty($cats) )
+  return false;
+ 
+ return trim(join( $glue, $cats ));
+} // end cats_meow
+
 ?>

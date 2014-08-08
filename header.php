@@ -18,14 +18,20 @@ E-mail:    robertolopesramos@gmail.com
     <!-- Carregando CSS's -->
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/nimbus.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/search.css">
+    <!-- bxSlider CSS file -->
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/queryLoader.css">
     <link href="<?php echo get_template_directory_uri(); ?>/assets/img/favicon.ico" rel="shortcut icon">
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <! [endif]-->
     <?php wp_head(); ?>
 </head>
 
 <body itemscope="" itemtype="http://schema.org/WebPage">
     <header class="header">
         <div class="header-content">
-            <a href="<?php get_option("home"); ?>">
+            <a href="<?php echo get_option("home"); ?>">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="Logo Mind Trip" class="logo">
             </a>
             <nav class="menu" id="menu">
@@ -45,5 +51,5 @@ E-mail:    robertolopesramos@gmail.com
         <?php get_sidebar('tags'); ?>
     </div><!-- /Search-Category -->
     <div class="dropdown-category" id="dcategoria">
-        <a href="#">Tags</a>
+        <a href="#"><i class="icon-tags"></i> Cloud Tags</a>
     </div><!-- /Dropdown-Category -->
